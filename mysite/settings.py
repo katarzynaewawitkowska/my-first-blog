@@ -25,7 +25,7 @@ SECRET_KEY = 'hczrwd$%-9ikn$-*8#m(i!0@=2zpt=a-!f1_d@#8&68ic(pj+g'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['nekodearu.pythonanywhere.com']
+ALLOWED_HOSTS = ['nekodearu.pythonanywhere.com', '127.0.0.1']
 
 
 # Application definition
