@@ -8,13 +8,13 @@
 			<h2> Blog Kasi </h2>
         </div>
 
-       {% for post in posts %}
-    <div>
-        <p>published: {{ post.published_date }}</p>
-        <h1><a href="">{{ post.title }}</a></h1>
-        <p>{{ post.text|linebreaksbr }}</p>
-    </div>
-	   {% endfor %}
+        {% for post in posts %}
+            <div>
+				<p>published: {{ post.published_date }}</p>
+				<h1><a href="">{{ post.title }}</a></h1>
+				<p>{{ post.text|linebreaksbr }}</p>
+			</div>
+	    {% endfor %}
 
         <div>
             <p>published: 26.10.2017, 23:29</p>
