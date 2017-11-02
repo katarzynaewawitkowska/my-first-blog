@@ -1,25 +1,12 @@
-<html>
-    <head>
-        <title>moj pierwszy blog ever</title>
-    </head>
-    <body>
-        <div>
-            <h1><a href="">Django Girls Blog</a></h1>
-			<h2> Blog Kasi </h2>
-        </div>
-
-        {% for post in posts %}
-            <div>
-				<p>published: {{ post.published_date }}</p>
-				<h1><a href="">{{ post.title }}</a></h1>
-				<p>{{ post.text|linebreaksbr }}</p>
-			</div>
-	    {% endfor %}
-
-        <div>
-            <p>published: 26.10.2017, 23:29</p>
-            <h2><a href="">My second post</a></h2>
-            <p> In nova fert animus mutatas dicere formas corpora;<br /> di, coeptis (nam vos mutastis et illa) adspirate meis <br /> primaque ab origine mundi ad mea perpetuum <br />deducite tempora carmen!</p>
-        </div>
-    </body>
-</html>
+{% extends 'blog/base.html' %}
+	{% block content %}
+		{% for post in posts %}
+			<div class="post">
+				<div class="date">
+					<p>published: {{ post.published_date }}</p>
+				</div>
+					<h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
+					<p>{{ post.text|linebreaksbr }}</p>
+				</div>
+		{% endfor %}
+	{% endblock %}
